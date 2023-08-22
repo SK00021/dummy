@@ -2,6 +2,9 @@ Data Visualization using R programming
 Part A 1. For a given set of training data examples stored in a .CSV file, compute the Mean,
 Median, Variance, Standard Deviation, Range and Quartiles of one of the attributes
 using R programming.
+
+
+
 #Importing data set and printing the first few values
 myData = read.csv("C:/Users/navbs/OneDrive/Desktop/CardioGoodFitness.csv")
 print(head(myData))
@@ -28,6 +31,10 @@ print(range)
 # Calculating Quartiles
 quartiles = quantile(myData$Age)
 print(quartiles)
+
+
+
+
 2. Write an R program to perform the following operations: Create a file, Writing into a
 file, Renaming a file, Reading a file, Listing all files, Copy a file.
 #Create a file
@@ -46,6 +53,9 @@ list.files()
 # Copy a file
 file.copy"C:/Users/navbs/OneDrive/Documents/Abc.txt", "D:/")
 list.files("D:/")
+
+
+
 3. Write an R program to perform the following operations on strings: Concatenate two
 strings, Compare two strings, Reverse the string and Check if a given string is a
 palindrome or not.
@@ -73,7 +83,11 @@ if (text2 == reversed_string) {
 cat("The string is a palindrome.\n")
 } else {
 cat("The string is not a palindrome.\n")
-}4. Write an R program to demonstrate the use of the following String manipulation
+}
+
+
+
+4. Write an R program to demonstrate the use of the following String manipulation
 functions in R: nchar, toupper, tolower, substr, grep, paste, strsplit, sprintf, cat and sub
 functions.
 string = "Hello My Name Is TechVidvan"
@@ -106,7 +120,15 @@ sprintf("There are %d dollars in %s's %s", count, name, place)
 cat("hello","this","is","Techvidvan",sep = "-")
 # sub function
 sub("My Name Is", "I Am", string)
-Part B 5. Write an R program to create the following basic plots: Scatter plot, Line graph, Bar
+
+
+
+
+Part B 
+
+
+
+5. Write an R program to create the following basic plots: Scatter plot, Line graph, Bar
 plot and Histogram.
 # Sample data
 x = c(1, 2, 3, 4, 5)
@@ -124,6 +146,10 @@ barplot(y, names.arg = x, col = "green", xlab = "X-axis", ylab = "Y-axis", main 
 Example")
 # Histogram
 hist(y, col = "purple", xlab = "X-axis", ylab = "Frequency", main = "Histogram Example")
+
+
+
+
 6. Write an R program to create a 2D and 3D Pie chart with slice percentage & legend.
 # Create data for the graph
 data = c(23, 56, 20, 63)
@@ -139,6 +165,9 @@ library(plotrix)
 pie3D(data, labels = piepercent, main = "City pie chart", col = rainbow(length(data)))
 legend("topright", c("Mumbai", "Pune", "Chennai", "Bangalore"), cex = 0.5,
 fill=rainbow(length(data)))
+
+
+
 7. Using the in-build Iris dataset and ggplot2 package, write an R program to create
 Scatter plot, Line graph and Bar plot with chart titles and axis titles.
 # install.packages("ggplot2")
@@ -163,6 +192,10 @@ Petal Width", x = "Petal Length", y = "Petal Width") + scale_color_manual(values
 c("setosa" = "blue", "versicolor" = "green", "virginica" = "red")) +
 scale_shape_manual(values = c("setosa" = 16, "versicolor" = 17, "virginica" = 18))
 print(scatter_plot)
+
+
+
+
 8. Write an R program to create Histogram and Box plots using ggplot2 package in R.
 # Load required libraries
 library(ggplot2)
@@ -181,6 +214,11 @@ data = data.frame(group = rep(c("A", "B", "C"), each = 50), value = rnorm(150))
 ggplot(data, aes(x = group, y = value, fill = group)) +
 geom_boxplot() + labs(title = "Box Plot", x = "Group", y = "Value") +
 theme_minimal()
+
+
+
+
+
 9. Using the in-build mtcars dataset and lattice package, write an R program to create
 Bar plot, Scatter plot, Histogram and Density plot.
 # Load required libraries
@@ -203,6 +241,10 @@ print(histogram_plot)
 density_plot <- densityplot(~ mpg, data = mtcars, main = "Density Plot of MPG", xlab =
 "MPG", ylab = "Density", col = "purple")
 print(density_plot)
+
+
+
+
 10. Write an R program to create 3D Wireframe Plot and Level Plot using lattice package
 in R.
 # Load the lattice package for advanced visualizations
@@ -221,6 +263,9 @@ x = seq(-pi, pi, length.out = 100)
 y = seq(-pi, pi, length.out = 100)
 z = outer(x, y, function(x, y) sin(sqrt(x^2 + y^2)))
 levelplot(z, xlab = "x", ylab = "y", main = "2D Sin Function")
+
+
+
 Dept of CSE SCEM
 VIVA
 
